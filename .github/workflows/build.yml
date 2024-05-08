@@ -3,12 +3,13 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
+
 
 jobs:
   build:
     name: Build
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -29,3 +30,10 @@ jobs:
           docker push shivakumar5007/swiggy-clone:latest
         env:
           DOCKER_CLI_ACI: 1
+      # If you wish to fail your job when the Quality Gate is red, uncomment the
+      # following lines. This would typically be used to fail a deployment.
+      # - uses: sonarsource/sonarqube-quality-gate-action@master
+      #   timeout-minutes: 5
+      #   env:
+      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
