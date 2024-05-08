@@ -42,7 +42,7 @@ jobs:
       - name: Update kubeconfig
         run: aws eks --region ap-south-1 update-kubeconfig --name EKS_CLOUD
       - name: Deploy to kubernetes
-        run: kubectl apply -f deployment-service.yml2. commit the changes and this will deploy the image locally on the base server
+        run: kubectl apply -f deployment-service.yml
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
       # - uses: sonarsource/sonarqube-quality-gate-action@master
