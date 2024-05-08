@@ -41,7 +41,8 @@ jobs:
         run: docker run -d --name swiggy-clone -p 3000:3000 shivakumar5007/swiggy-clone:latest
       
       - name: Deploy to kubernetes
-        run: kubectl apply -f deployment-service.yml2
+        run: kubectl apply -f deployment-service.yml
+        
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
       # - uses: sonarsource/sonarqube-quality-gate-action@master
