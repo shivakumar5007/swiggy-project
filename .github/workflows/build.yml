@@ -32,7 +32,7 @@ jobs:
           DOCKER_CLI_ACI: 1
   deploy:
    needs: build
-   runs-on: ubuntu-latest
+   runs-on: [self-hosted]
    steps:
       - name: docker pull image
         run: docker pull shivakumar5007/swiggy-clone:latest
